@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Shop.DataAccess.Json/1.0.0": {
+        "dependencies": {
+          "Shop.BusinessLogic": "1.0.0"
+        },
+        "runtime": {
+          "Shop.DataAccess.Json.dll": {}
+        }
+      },
+      "Shop.BusinessLogic/1.0.0": {
+        "runtime": {
+          "Shop.BusinessLogic.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Shop.DataAccess.Json/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Shop.BusinessLogic/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

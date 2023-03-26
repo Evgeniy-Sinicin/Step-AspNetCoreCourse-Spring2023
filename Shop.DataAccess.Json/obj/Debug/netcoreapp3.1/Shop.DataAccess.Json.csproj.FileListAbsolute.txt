@@ -1,0 +1,13 @@
+C:\Users\Kid\source\repos\Shop\Shop.DataAccess.Json\bin\Debug\netcoreapp3.1\Shop.DataAccess.Json.deps.json
+C:\Users\Kid\source\repos\Shop\Shop.DataAccess.Json\bin\Debug\netcoreapp3.1\Shop.DataAccess.Json.dll
+C:\Users\Kid\source\repos\Shop\Shop.DataAccess.Json\bin\Debug\netcoreapp3.1\Shop.DataAccess.Json.pdb
+C:\Users\Kid\source\repos\Shop\Shop.DataAccess.Json\bin\Debug\netcoreapp3.1\Shop.BusinessLogic.dll
+C:\Users\Kid\source\repos\Shop\Shop.DataAccess.Json\bin\Debug\netcoreapp3.1\Shop.BusinessLogic.pdb
+C:\Users\Kid\source\repos\Shop\Shop.DataAccess.Json\obj\Debug\netcoreapp3.1\Shop.DataAccess.Json.csproj.AssemblyReference.cache
+C:\Users\Kid\source\repos\Shop\Shop.DataAccess.Json\obj\Debug\netcoreapp3.1\Shop.DataAccess.Json.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kid\source\repos\Shop\Shop.DataAccess.Json\obj\Debug\netcoreapp3.1\Shop.DataAccess.Json.AssemblyInfoInputs.cache
+C:\Users\Kid\source\repos\Shop\Shop.DataAccess.Json\obj\Debug\netcoreapp3.1\Shop.DataAccess.Json.AssemblyInfo.cs
+C:\Users\Kid\source\repos\Shop\Shop.DataAccess.Json\obj\Debug\netcoreapp3.1\Shop.DataAccess.Json.csproj.CoreCompileInputs.cache
+C:\Users\Kid\source\repos\Shop\Shop.DataAccess.Json\obj\Debug\netcoreapp3.1\Shop.DataAccess.Json.csproj.CopyComplete
+C:\Users\Kid\source\repos\Shop\Shop.DataAccess.Json\obj\Debug\netcoreapp3.1\Shop.DataAccess.Json.dll
+C:\Users\Kid\source\repos\Shop\Shop.DataAccess.Json\obj\Debug\netcoreapp3.1\Shop.DataAccess.Json.pdb

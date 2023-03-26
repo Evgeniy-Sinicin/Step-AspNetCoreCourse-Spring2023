@@ -1,0 +1,123 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Shop.BusinessLogic/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Shop.BusinessLogic.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Shop.BusinessLogic.dll": {}
+        }
+      },
+      "Shop.DataAccess.Json/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Shop.BusinessLogic": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Shop.DataAccess.Json.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Shop.DataAccess.Json.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Shop.BusinessLogic/1.0.0": {
+      "type": "project",
+      "path": "../Shop.BusinessLogic/Shop.BusinessLogic.csproj",
+      "msbuildProject": "../Shop.BusinessLogic/Shop.BusinessLogic.csproj"
+    },
+    "Shop.DataAccess.Json/1.0.0": {
+      "type": "project",
+      "path": "../Shop.DataAccess.Json/Shop.DataAccess.Json.csproj",
+      "msbuildProject": "../Shop.DataAccess.Json/Shop.DataAccess.Json.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "Shop.BusinessLogic >= 1.0.0",
+      "Shop.DataAccess.Json >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Kid\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Kid\\source\\repos\\Shop\\Shop.Presentation.Web\\Shop.Presentation.Web.csproj",
+      "projectName": "Shop.Presentation.Web",
+      "projectPath": "C:\\Users\\Kid\\source\\repos\\Shop\\Shop.Presentation.Web\\Shop.Presentation.Web.csproj",
+      "packagesPath": "C:\\Users\\Kid\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Kid\\source\\repos\\Shop\\Shop.Presentation.Web\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Kid\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "projectReferences": {
+            "C:\\Users\\Kid\\source\\repos\\Shop\\Shop.BusinessLogic\\Shop.BusinessLogic.csproj": {
+              "projectPath": "C:\\Users\\Kid\\source\\repos\\Shop\\Shop.BusinessLogic\\Shop.BusinessLogic.csproj"
+            },
+            "C:\\Users\\Kid\\source\\repos\\Shop\\Shop.DataAccess.Json\\Shop.DataAccess.Json.csproj": {
+              "projectPath": "C:\\Users\\Kid\\source\\repos\\Shop\\Shop.DataAccess.Json\\Shop.DataAccess.Json.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.411\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

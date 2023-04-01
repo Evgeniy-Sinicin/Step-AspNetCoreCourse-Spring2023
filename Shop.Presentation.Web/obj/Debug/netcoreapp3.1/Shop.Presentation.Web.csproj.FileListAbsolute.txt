@@ -35,3 +35,14 @@ C:\Users\Kid\source\repos\Shop\Shop.Presentation.Web\bin\Debug\netcoreapp3.1\Sho
 C:\Users\Kid\source\repos\Shop\Shop.Presentation.Web\bin\Debug\netcoreapp3.1\Shop.DataAccess.Json.dll
 C:\Users\Kid\source\repos\Shop\Shop.Presentation.Web\bin\Debug\netcoreapp3.1\Shop.BusinessLogic.pdb
 C:\Users\Kid\source\repos\Shop\Shop.Presentation.Web\bin\Debug\netcoreapp3.1\Shop.DataAccess.Json.pdb
+C:\Users\Kid\source\repos\Shop\Shop.Presentation.Web\bin\Debug\netcoreapp3.1\categories.json
+C:\Users\Kid\source\repos\Shop\Shop.Presentation.Web\bin\Debug\netcoreapp3.1\products.json
+C:\Users\Kid\source\repos\Shop\Shop.Presentation.Web\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\Kid\source\repos\Shop\Shop.Presentation.Web\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\Kid\source\repos\Shop\Shop.Presentation.Web\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\Kid\source\repos\Shop\Shop.Presentation.Web\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Kid\source\repos\Shop\Shop.Presentation.Web\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Kid\source\repos\Shop\Shop.Presentation.Web\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Kid\source\repos\Shop\Shop.Presentation.Web\obj\Debug\netcoreapp3.1\Shop.Presentation.Web.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Kid\source\repos\Shop\Shop.Presentation.Web\obj\Debug\netcoreapp3.1\Razor\Views\Category\Categories.cshtml.g.cs
+C:\Users\Kid\source\repos\Shop\Shop.Presentation.Web\bin\Debug\netcoreapp3.1\links.json

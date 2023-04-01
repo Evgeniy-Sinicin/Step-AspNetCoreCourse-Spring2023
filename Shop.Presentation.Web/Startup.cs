@@ -23,7 +23,9 @@ namespace Shop.Presentation.Web
         {
             services.AddMvc((options) => options.EnableEndpointRouting = false);
             services.AddSingleton<ICategoryService, CategoryService>();
+            services.AddSingleton<IProductService, ProductService>();
             services.AddSingleton<IUnitOfWork, JsonUnitOfWork>();
+            services.AddSwaggerGen();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -31,6 +33,8 @@ namespace Shop.Presentation.Web
             app.UseDeveloperExceptionPage();
             app.UseStaticFiles();
             app.UseMvcWithDefaultRoute();
+            app.UseSwagger();
+            app.UseSwaggerUI();
         }
 
         private void DisableEndpointRouting(MvcOptions options)

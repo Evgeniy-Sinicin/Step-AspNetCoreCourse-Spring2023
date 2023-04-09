@@ -35,5 +35,10 @@ namespace Shop.BusinessLogic.Services
 
             return filteredProducts.ToList();
         }
+
+        public List<Product> GetOrderedProducts(int userId)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

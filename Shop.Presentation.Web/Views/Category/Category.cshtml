@@ -1,0 +1,46 @@
+﻿@model Category
+
+<div class="container">
+    <div class="row-mb-6">
+        @if (Model == null)
+        {
+            <h3>Category creation</h3>
+        }
+        else
+        {
+            <h3 class="horizontal-center">@Model.Name editing</h3>
+            <img class="img-thumbnail default-img-size"
+                 src="@Model.ImagePath"
+                 alt="@Model.Name"
+                 asp-append-version="true" />
+        }
+    <form asp-controller="Category" asp-action="CreateOrUpdate" method="POST">
+        <div class="validation" asp-validation-summary="ModelOnly"></div>
+
+        <div class="form-group" hidden>
+            <input asp-for="Id" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Name"></label>
+            <div class="col-12">
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ImagePath"></label>
+            <div class="col-12">
+                <input asp-for="ImagePath" class="form-control" />
+                <span asp-validation-for="ImagePath" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="horizontal-space-evenly pb-2">
+            <input class="btn btn-success" type="submit" value="✔" />
+            <a href="/Category/GetAll" class="btn btn-danger">❌</a>
+        </div>
+    </form>
+    </div>
+</div>

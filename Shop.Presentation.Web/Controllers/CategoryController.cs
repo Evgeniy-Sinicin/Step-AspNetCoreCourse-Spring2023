@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Shop.BusinessLogic.Models;
 using Shop.BusinessLogic.Services.Interfaces;
 
 namespace Shop.Presentation.Web.Controllers
@@ -20,6 +21,40 @@ namespace Shop.Presentation.Web.Controllers
             var categories = _categoryService.GetAll();
 
             return View("Categories", categories);
+        }
+
+        [HttpGet]
+        [Route("Get")]
+        public IActionResult Get(string categoryName)
+        {
+            var category = _categoryService.Get(categoryName);
+
+            return View("Category", category);
+        }
+
+        [HttpPost]
+        [Route("CreateOrUpdate")]
+        public IActionResult CreateOrUpdate(Category category)
+        {
+            if (category.Id == 0)
+            {
+                _categoryService.Create(category);
+            }
+            else
+            {
+                _categoryService.Update(category);
+            }
+
+            return Redirect("GetAll");
+        }
+
+        [HttpGet]
+        [Route("Delete")]
+        public IActionResult Delete(int categoryId)
+        {
+            _categoryService.Delete(categoryId);
+
+            return Redirect("GetAll");
         }
     }
 }

@@ -8,5 +8,9 @@ namespace Shop.BusinessLogic.DataAccessInterfaces
         public List<Category> GetAll();
 
         public Category Create(Category category);
+
+        public Category Update(Category category);
+
+        public Category Delete(int categoryId);
     }
 }

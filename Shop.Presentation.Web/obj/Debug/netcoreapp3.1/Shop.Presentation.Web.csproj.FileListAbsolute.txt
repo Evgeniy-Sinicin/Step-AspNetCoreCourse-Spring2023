@@ -46,3 +46,6 @@ C:\Users\Kid\source\repos\Shop\Shop.Presentation.Web\bin\Debug\netcoreapp3.1\Swa
 C:\Users\Kid\source\repos\Shop\Shop.Presentation.Web\obj\Debug\netcoreapp3.1\Shop.Presentation.Web.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Kid\source\repos\Shop\Shop.Presentation.Web\obj\Debug\netcoreapp3.1\Razor\Views\Category\Categories.cshtml.g.cs
 C:\Users\Kid\source\repos\Shop\Shop.Presentation.Web\bin\Debug\netcoreapp3.1\links.json
+C:\Users\Kid\source\repos\Shop\Shop.Presentation.Web\obj\Debug\netcoreapp3.1\Razor\Views\Product\Products.cshtml.g.cs
+C:\Users\Kid\source\repos\Shop\Shop.Presentation.Web\obj\Debug\netcoreapp3.1\Razor\Views\Category\Category.cshtml.g.cs
+C:\Users\Kid\source\repos\Shop\Shop.Presentation.Web\obj\Debug\netcoreapp3.1\Razor\Views\Product\OrderedProducts.cshtml.g.cs

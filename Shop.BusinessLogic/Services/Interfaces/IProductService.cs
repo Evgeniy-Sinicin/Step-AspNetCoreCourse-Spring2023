@@ -6,5 +6,7 @@ namespace Shop.BusinessLogic.Services.Interfaces
     public interface IProductService
     {
         public List<Product> GetAll(string categoryName);
+
+        public List<Product> GetOrderedProducts(int userId);
     }
 }

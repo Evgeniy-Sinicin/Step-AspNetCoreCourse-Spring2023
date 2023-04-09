@@ -6,6 +6,7 @@ namespace Shop.Presentation.Web.Controllers
     [Route("Product")]
     public class ProductController : Controller
     {
+        private const int UserId = 1;
         private readonly IProductService _productService;
 
         public ProductController(IProductService productService)
@@ -17,9 +18,22 @@ namespace Shop.Presentation.Web.Controllers
         [Route("GetAll")]
         public IActionResult GetAll(string categoryName)
         {
+            ViewBag.CategoryName = categoryName;
+
             var products = _productService.GetAll(categoryName);
 
-            return View();
+            return View("Products", products);
+        }
+
+        [HttpGet]
+        [Route("GetOrderedProducts")]
+        public IActionResult GetOrderedProducts()
+        {
+            ViewBag.Title = "Ordered Products";
+
+            var products = _productService.GetOrderedProducts(UserId);
+
+            return View("OrderedProducts", products);
         }
     }
 }

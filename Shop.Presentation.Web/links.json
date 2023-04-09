@@ -1,1 +1,18 @@
-[{"CategoryId":1,"ProductId":1},{"CategoryId":1,"ProductId":2},{"CategoryId":2,"ProductId":3},{"CategoryId":2,"ProductId":4}]
+[
+  {
+    "CategoryId": 1,
+    "ProductId": 1
+  },
+  {
+    "CategoryId": 1,
+    "ProductId": 2
+  },
+  {
+    "CategoryId": 2,
+    "ProductId": 3
+  },
+  {
+    "CategoryId": 2,
+    "ProductId": 4
+  }
+]

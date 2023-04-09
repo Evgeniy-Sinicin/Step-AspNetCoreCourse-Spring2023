@@ -1,6 +1,8 @@
 ﻿@model List<Category>
 
-<div class="horizontal-center">
+<div class="header">
+    <a href="/Category/Get" class="btn btn-warning mr-2">➕</a>
+
     <h1>Categories 📃</h1>
 </div>
 <div class="grid-items">
@@ -8,7 +10,7 @@
         foreach (var category in Model)
         {
             <div class="card col-sm-4">
-                <img class="card-img-top"
+                <img class="card-img-top default-img-size"
                      src="@category.ImagePath"
                      alt="@category.Name"
                      asp-append-version="true" />
@@ -16,7 +18,16 @@
                 <div class="card-body">
                     <h5 class="card-title">@category.Name</h5>
 
-                    <a class="btn btn-primary" href="/Product/GetAll?CategoryName=@category.Name">Open</a>
+                    <div class="edge-pressed">
+                        <div>
+                            <a class="btn btn-primary" href="/Product/GetAll?CategoryName=@category.Name">Open</a>
+                        </div>
+
+                        <div>
+                            <a class="btn btn-warning" href="/Category/Get?CategoryName=@category.Name">📝</a>
+                            <a class="btn btn-danger" href="/Category/Delete?CategoryId=@category.Id">🧺</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         }

@@ -21,7 +21,10 @@ namespace Shop.Presentation.Web
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc((options) => options.EnableEndpointRouting = false);
+            services.AddAuthentication();
+            services.AddAuthorization();
+            services.AddMvc((options) => options.EnableEndpointRouting = false)
+                .WithRazorPagesRoot("/Areas");
             services.AddSingleton<ICategoryService, CategoryService>();
             services.AddSingleton<IProductService, ProductService>();
             services.AddSingleton<IUnitOfWork, JsonUnitOfWork>();
@@ -30,6 +33,8 @@ namespace Shop.Presentation.Web
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseAuthentication();
+            app.UseAuthorization();
             app.UseDeveloperExceptionPage();
             app.UseStaticFiles();
             app.UseMvcWithDefaultRoute();

@@ -15,13 +15,13 @@ namespace Shop.Presentation.Web.Areas.Identity
         public void Configure(IWebHostBuilder builder)
         {
             builder.ConfigureServices((context, services) => {
-                services.AddDbContext<ShopDbContext>(options =>
+                services.AddDbContext<UserDbContext>(options =>
                     options.UseSqlServer(
-                        context.Configuration.GetConnectionString("ShopDbContextConnection")));
+                        context.Configuration.GetConnectionString("UserDbContextConnection")));
 
                 services.AddDefaultIdentity<ShopUser>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddRoles<IdentityRole>()    
-                .AddEntityFrameworkStores<ShopDbContext>();
+                .AddEntityFrameworkStores<UserDbContext>();
             });
         }
     }

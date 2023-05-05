@@ -9,9 +9,9 @@ using Shop.Presentation.Web.Areas.Identity.Data;
 
 namespace Shop.Presentation.Web.Areas.Identity.Data
 {
-    public class ShopDbContext : IdentityDbContext<ShopUser>
+    public class UserDbContext : IdentityDbContext<ShopUser>
     {
-        public ShopDbContext(DbContextOptions<ShopDbContext> options)
+        public UserDbContext(DbContextOptions<UserDbContext> options)
             : base(options)
         {
         }

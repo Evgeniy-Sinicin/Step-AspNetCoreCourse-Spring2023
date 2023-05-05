@@ -1,20 +1,24 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Shop.BusinessLogic.DataAccessInterfaces;
 using Shop.BusinessLogic.Services;
 using Shop.BusinessLogic.Services.Interfaces;
+using Shop.DataAccess.EFCore;
 using Shop.DataAccess.Json;
+using Shop.Presentation.Web.Filtres;
 using Shop.Presentation.Web.Middleware;
+using Shop.Presentation.Web.Properties;
 using System;
 
 namespace Shop.Presentation.Web
 {
     public class Startup
     {
-        private IConfiguration _configuration;
+        private readonly IConfiguration _configuration;
 
         public Startup(IConfiguration configuration)
         {
@@ -25,11 +29,20 @@ namespace Shop.Presentation.Web
         {
             services.AddAuthentication();
             services.AddAuthorization();
-            services.AddMvc((options) => options.EnableEndpointRouting = false)
-                .WithRazorPagesRoot("/Areas");
-            services.AddSingleton<ICategoryService, CategoryService>();
-            services.AddSingleton<IProductService, ProductService>();
-            services.AddSingleton<IUnitOfWork, JsonUnitOfWork>();
+            services.AddMvc((options) => 
+            {
+                options.EnableEndpointRouting = false;
+                options.Filters.Add<LogUserActivirtyActionFilter>();
+            }).WithRazorPagesRoot("/Areas");
+            services.AddDbContext<ShopDbContext>(options =>
+            {
+                var connection = _configuration.GetConnectionString(Resources.ShopDbContextConnection);
+                options.UseSqlServer(connection);
+            });
+            services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<IProductService, ProductService>();
+            //services.AddSingleton<IUnitOfWork, JsonUnitOfWork>();
+            services.AddScoped<IUnitOfWork, EFUnitOfWork>();
             services.AddSwaggerGen();
             services.AddSingleton<ISingletonGuidCreator, GuidCreator2>();
             services.AddScoped<IScopedGuidCreator, GuidCreator2>();

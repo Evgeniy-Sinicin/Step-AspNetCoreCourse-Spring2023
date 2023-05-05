@@ -9,7 +9,7 @@ using Shop.Presentation.Web.Areas.Identity.Data;
 
 namespace Shop.Presentation.Web.Migrations
 {
-    [DbContext(typeof(ShopDbContext))]
+    [DbContext(typeof(UserDbContext))]
     [Migration("20230415165250_test2")]
     partial class test2
     {

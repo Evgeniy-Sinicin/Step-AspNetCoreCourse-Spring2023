@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Shop.Presentation.Web.Filtres;
 using System;
 
 namespace Shop.Presentation.Web.Controllers
@@ -33,6 +34,7 @@ namespace Shop.Presentation.Web.Controllers
             this.transientGuidCreator2 = transientGuidCreator2;
         }
 
+        [LogUserActivirtyActionFilter]
         public IActionResult Index()
         {
             return View();

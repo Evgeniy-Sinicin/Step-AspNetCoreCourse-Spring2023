@@ -8,7 +8,7 @@ using Shop.Presentation.Web.Areas.Identity.Data;
 
 namespace Shop.Presentation.Web.Migrations
 {
-    [DbContext(typeof(ShopDbContext))]
+    [DbContext(typeof(UserDbContext))]
     partial class ShopDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

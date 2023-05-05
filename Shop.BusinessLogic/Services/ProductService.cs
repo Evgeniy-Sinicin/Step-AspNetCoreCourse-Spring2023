@@ -42,7 +42,8 @@ namespace Shop.BusinessLogic.Services
             var allOrders = _unitOfWork.OrderRepository.GetAll().ToList();
             var userOrders = allOrders.Where(x => x.UserEmail.Equals(userEmail, StringComparison.OrdinalIgnoreCase));
             var userProductIds = userOrders.Select(x => x.ProductId);
-            var orderedProducts = _productRepository.GetAll().Where(x => userProductIds.Contains(x.Id)).ToList();
+            var products = _productRepository.GetAll();
+            var orderedProducts = userProductIds.Select(id => products.FirstOrDefault(x => x.Id == id)).ToList();
 
             return orderedProducts;
         }

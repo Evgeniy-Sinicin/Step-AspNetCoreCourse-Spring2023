@@ -8,25 +8,25 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\Kid\\.nuget\\packages\\": {},
+    "C:\\Users\\developer\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kid\\source\\repos\\Shop\\Shop.BusinessLogic\\Shop.BusinessLogic.csproj",
+      "projectUniqueName": "C:\\Users\\developer\\source\\repos\\Shop\\Shop.BusinessLogic\\Shop.BusinessLogic.csproj",
       "projectName": "Shop.BusinessLogic",
-      "projectPath": "C:\\Users\\Kid\\source\\repos\\Shop\\Shop.BusinessLogic\\Shop.BusinessLogic.csproj",
-      "packagesPath": "C:\\Users\\Kid\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kid\\source\\repos\\Shop\\Shop.BusinessLogic\\obj\\",
+      "projectPath": "C:\\Users\\developer\\source\\repos\\Shop\\Shop.BusinessLogic\\Shop.BusinessLogic.csproj",
+      "packagesPath": "C:\\Users\\developer\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\developer\\source\\repos\\Shop\\Shop.BusinessLogic\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Kid\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\developer\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"

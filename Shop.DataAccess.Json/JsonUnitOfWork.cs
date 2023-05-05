@@ -27,13 +27,13 @@ namespace Shop.DataAccess.Json
                 categories = JsonSerializer.Deserialize<List<Category>>(json);
             }
 
-            if (File.Exists(_categoryFilePath))
+            if (File.Exists(_productsFilePath))
             {
                 var json = File.ReadAllText(_productsFilePath);
                 products = JsonSerializer.Deserialize<List<Product>>(json);
             }
 
-            if (File.Exists(_categoryFilePath))
+            if (File.Exists(_linksFilePath))
             {
                 var json = File.ReadAllText(_linksFilePath);
                 links = JsonSerializer.Deserialize<List<Link>>(json);
@@ -41,7 +41,7 @@ namespace Shop.DataAccess.Json
 
             if (File.Exists(_ordersFilePath))
             {
-                var json = File.ReadAllText(_linksFilePath);
+                var json = File.ReadAllText(_ordersFilePath);
                 orders = JsonSerializer.Deserialize<List<Order>>(json);
             }
 

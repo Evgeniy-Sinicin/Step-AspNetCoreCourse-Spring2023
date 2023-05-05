@@ -8,6 +8,8 @@
 
         public ILinkRepository LinkRepository { get; }
 
+        public IOrderRepository OrderRepository { get; }
+
         public void SaveChenges();
     }
 }

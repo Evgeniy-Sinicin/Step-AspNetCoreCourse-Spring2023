@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Shop.BusinessLogic.Models;
 using Shop.BusinessLogic.Services.Interfaces;
+using Shop.Presentation.Web.Areas.Identity.Data;
 
 namespace Shop.Presentation.Web.Controllers
 {

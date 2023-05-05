@@ -1,0 +1,22 @@
+[
+  {
+    "ProductId": 4,
+    "UserEmail": "User1@mail.com"
+  },
+  {
+    "ProductId": 2,
+    "UserEmail": "User1@mail.com"
+  },
+  {
+    "ProductId": 2,
+    "UserEmail": "User1@mail.com"
+  },
+  {
+    "ProductId": 1,
+    "UserEmail": "User1@mail.com"
+  },
+  {
+    "ProductId": 2,
+    "UserEmail": "User1@mail.com"
+  }
+]

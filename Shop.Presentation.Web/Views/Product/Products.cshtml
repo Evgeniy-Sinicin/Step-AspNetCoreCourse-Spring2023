@@ -1,7 +1,7 @@
 ﻿@model List<Product>
 
 <div class="header">
-    <a href="/Product/Get" class="btn btn-warning mr-2">➕</a>
+    <a is-displayed="@User.IsInRole(Role.Admin.ToString())" href="/Product/Get" class="btn btn-warning mr-2">➕</a>
 
     <h1>Products in @ViewBag.CategoryName</h1>
 </div>

@@ -1,7 +1,7 @@
 ﻿@model List<Category>
 
-<div is-diplayed="@User.IsInRole(Role.User.ToString())" class="header">
-    <a href="/Category/Get" class="btn btn-warning mr-2">➕</a>
+<div class="header">
+    <a is-displayed="@User.IsInRole(Role.Admin.ToString())" href="/Category/Get" class="btn btn-warning mr-2">➕</a>
 
     <h1>Categories 📃</h1>
 </div>
@@ -23,9 +23,9 @@
                             <a class="btn btn-primary" href="/Product/GetAll?CategoryName=@category.Name">Open</a>
                         </div>
 
-                        <div>
-                            <a class="btn btn-warning" href="/Category/Get?CategoryName=@category.Name" is-diplayed="@User.IsInRole(Role.User.ToString())">📝</a>
-                            <a class="btn btn-danger" href="/Category/Delete?CategoryId=@category.Id" is-diplayed="@User.IsInRole(Role.User.ToString())">🧺</a>
+                        <div is-displayed="@User.IsInRole(Role.Admin.ToString())">
+                            <a class="btn btn-warning" href="/Category/Get?CategoryName=@category.Name">📝</a>
+                            <a class="btn btn-danger" href="/Category/Delete?CategoryId=@category.Id">🧺</a>
                         </div>
                     </div>
                 </div>

@@ -31,9 +31,23 @@ namespace Shop.Presentation.Web.Controllers
         {
             ViewBag.Title = "Ordered Products";
 
-            var products = _productService.GetOrderedProducts(UserId);
+            var products = _productService.GetOrderedProducts(User.Identity.Name);
 
             return View("OrderedProducts", products);
+        }
+
+        [HttpGet]
+        [Route("Buy")]
+        public IActionResult Buy(int productId, string categoryName)
+        {
+            ViewBag.Title = "Products";
+            ViewBag.CategoryName = categoryName;
+
+            var products = _productService.GetAll(categoryName);
+
+            _productService.Buy(productId, User.Identity.Name);
+
+            return View("Products", products);
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Shop.BusinessLogic.DataAccessInterfaces;
 using Shop.BusinessLogic.Models;
 using Shop.BusinessLogic.Services.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -36,9 +37,29 @@ namespace Shop.BusinessLogic.Services
             return filteredProducts.ToList();
         }
 
-        public List<Product> GetOrderedProducts(int userId)
+        public List<Product> GetOrderedProducts(string userEmail)
         {
-            throw new System.NotImplementedException();
+            var allOrders = _unitOfWork.OrderRepository.GetAll().ToList();
+            var userOrders = allOrders.Where(x => x.UserEmail.Equals(userEmail, StringComparison.OrdinalIgnoreCase));
+            var userProductIds = userOrders.Select(x => x.ProductId);
+            var orderedProducts = _productRepository.GetAll().Where(x => userProductIds.Contains(x.Id)).ToList();
+
+            return orderedProducts;
+        }
+
+        public Product Buy(int productId, string userEmail)
+        {
+            var product = _productRepository.GetAll().FirstOrDefault(x => x.Id == productId);
+            var order = new Order
+            {
+                UserEmail = userEmail,
+                ProductId = productId,
+            };
+
+            _unitOfWork.OrderRepository.Create(order);
+            _unitOfWork.SaveChenges();
+
+            return product;
         }
     }
 }

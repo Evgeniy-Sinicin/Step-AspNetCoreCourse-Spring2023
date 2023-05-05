@@ -12,12 +12,14 @@ namespace Shop.DataAccess.Json
         private const string _categoryFilePath = "categories.json";
         private const string _productsFilePath = "products.json";
         private const string _linksFilePath = "links.json";
+        private const string _ordersFilePath = "orders.json";
 
         public JsonUnitOfWork()
         {
             var categories = new List<Category>();
             var products = new List<Product>();
             var links = new List<Link>();
+            var orders = new List<Order>();
 
             if (File.Exists(_categoryFilePath))
             {
@@ -37,9 +39,16 @@ namespace Shop.DataAccess.Json
                 links = JsonSerializer.Deserialize<List<Link>>(json);
             }
 
+            if (File.Exists(_ordersFilePath))
+            {
+                var json = File.ReadAllText(_linksFilePath);
+                orders = JsonSerializer.Deserialize<List<Order>>(json);
+            }
+
             CategoryRepository = new CategoryRepository(categories);
             ProductRepository = new ProductRepository(products);
             LinkRepository = new LinkRepository(links);
+            OrderRepository = new OrderRepository(orders);
         }
 
         public ICategoryRepository CategoryRepository { get; }
@@ -48,19 +57,24 @@ namespace Shop.DataAccess.Json
 
         public ILinkRepository LinkRepository { get; }
 
+        public IOrderRepository OrderRepository { get; }
+
         public void SaveChenges()
         {
             var categories = CategoryRepository.GetAll();
             var products = ProductRepository.GetAll();
             var links = LinkRepository.GetAll();
+            var orders = OrderRepository.GetAll();
 
             var categoriesJson = JsonSerializer.Serialize(categories);
             var productsJson = JsonSerializer.Serialize(products);
             var linksJson = JsonSerializer.Serialize(links);
+            var ordersJson = JsonSerializer.Serialize(orders);
 
             File.WriteAllText(_categoryFilePath, categoriesJson);
             File.WriteAllText(_productsFilePath, productsJson);
             File.WriteAllText(_linksFilePath, linksJson);
+            File.WriteAllText(_ordersFilePath, ordersJson);
         }
     }
 }

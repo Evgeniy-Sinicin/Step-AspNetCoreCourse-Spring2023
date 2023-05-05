@@ -7,6 +7,8 @@ namespace Shop.BusinessLogic.Services.Interfaces
     {
         public List<Product> GetAll(string categoryName);
 
-        public List<Product> GetOrderedProducts(int userId);
+        public List<Product> GetOrderedProducts(string userEmail);
+
+        public Product Buy(int productId, string userEmail);
     }
 }

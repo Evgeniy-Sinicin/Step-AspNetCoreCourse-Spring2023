@@ -2,7 +2,7 @@
 
 namespace Shop.Presentation.Web.ShopTagHelpers
 {
-    [HtmlTargetElement(Attributes = "is-diplayed")]
+    [HtmlTargetElement(Attributes = "is-displayed")]
     public class IsDisplayedTagHelper : TagHelper
     {
         public bool IsDisplayed { get; set; }
